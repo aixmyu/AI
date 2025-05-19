@@ -7,19 +7,18 @@
 #deactivate
 
 import streamlit as st
-# Load model directly
-from transformers import AutoTokenizer, AutoModelForCausalLM
+import os
 
-tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6b")
-model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-j-6b")
+# Set the path as environment variable
+os.environ['PATH'] = 'C:\Users\reths\tools\AI\streamlit\.venv'
+# Load model directly
+# from transformers import AutoTokenizer, AutoModelForCausalLM
+#tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6b")
+#model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-j-6b")
 
 cat = st.image
 st.write('welcome baka')
 st.write('what is ur name?')
-st.text_input("Your name", key="name")
-
-# You can access the value at any point with:
-st.session_state.name
-
-x = st.slider('x')  # 👈 this is a widget
-st.write(x, 'squared is', x * x)
+if st.text_input("Your name", key="name"):
+    st.balloons()
+# You can access the value at any point with:)st.session_state.name
