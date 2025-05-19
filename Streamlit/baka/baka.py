@@ -7,10 +7,6 @@
 #deactivate
 
 import streamlit as st
-import os
-
-# Set the path as environment variable
-os.environ['PATH'] = 'C:\Users\reths\tools\AI\streamlit\.venv'
 # Load model directly
 # from transformers import AutoTokenizer, AutoModelForCausalLM
 #tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6b")
